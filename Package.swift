@@ -32,11 +32,10 @@ import PackageDescription
 let package = Package(
     name: "FlexColorPicker",
     platforms: [
-        SupportedPlatform.iOS(.v9),
+        .iOS(.v9), .macOS(.v10_15),
     ],
     products: [
         Product.library(name: "FlexColorPicker", targets: ["FlexColorPicker"]),
-//        Product.executable(name: "FlexColorPickerDemo", targets: ["FlexColorPickerDemo"]),
     ],
     dependencies: [],
     targets: [
@@ -46,13 +45,5 @@ let package = Package(
             path: "FlexColorPicker/Classes",
             exclude: ["../../FlexColorPicker.podspec", "FlexColorPicker.podspec", "../GifsAndScreenshots"]
         ),
-//        PackageDescription.Target.target(
-//            name: "FlexColorPickerDemo",
-//            dependencies: ["FlexColorPicker"],
-//            path: "FlexColorPickerDemo/Classes",
-//            exclude: ["../../FlexColorPicker.podspec", "FlexColorPicker.podspec"]
-//        )
     ]
 )
-
-import Foundation
