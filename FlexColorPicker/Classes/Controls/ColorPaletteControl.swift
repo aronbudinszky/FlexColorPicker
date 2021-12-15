@@ -93,8 +93,8 @@ open class ColorPaletteControl: ColorControlWithThumbView {
         paletteDelegate.size = foregroundImageView.bounds.size //cannot use self.bounds as that is extended compared to foregroundImageView.bounds when AdjustedHitBoxColorControl.hitBoxInsets are non-zero
         foregroundImageView.image = paletteDelegate.foregroundImage()
         backgroundImageView.image = paletteDelegate.backgroundImage()
-        assert(foregroundImageView.image!.size.width <= paletteDelegate.size.width && foregroundImageView.image!.size.height <= paletteDelegate.size.height, "Size of rendered image must be smaller or equal specified palette size")
-        assert(backgroundImageView.image == nil || foregroundImageView.image?.size == backgroundImageView.image?.size, "foreground and background images rendered must have same size")
+        //assert(foregroundImageView.image!.size.width <= paletteDelegate.size.width && foregroundImageView.image!.size.height <= paletteDelegate.size.height, "Size of rendered image must be smaller or equal specified palette size")
+        //assert(backgroundImageView.image == nil || foregroundImageView.image?.size == backgroundImageView.image?.size, "foreground and background images rendered must have same size")
         updateContentMode()
         updateThumbPosition(position: paletteDelegate.positionAndAlpha(for: selectedHSBColor).position)
         thumbView.setColor(selectedColor, animateBorderColor: interactive)
